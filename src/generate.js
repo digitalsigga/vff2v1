@@ -8,7 +8,14 @@ async function main() {
 
   const files = readFilesFromDir(INPUT_DIR);
 
-  console.lof(files);
+  for await (const file of files) {
+    if (file.indexOf('gameday') < 0){
+      continue;
+    } 
+    const fileContent = await readFile(file);
+    console.log(file, fileContents?.length);
+  }
+
 
 }
 
