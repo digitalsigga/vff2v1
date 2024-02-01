@@ -1,4 +1,4 @@
 
 export function calculateStandings(data) {
-  return data.length;
+  return data;
 }
