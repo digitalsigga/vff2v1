@@ -19,7 +19,14 @@ async function main() {
     if (file.indexOf('gameday') < 0){
       continue;
     } 
+
     const fileContent = await readFile(file);
+
+    console.info('ðarsea skrá', file)
+
+    if (!fileContent) {
+      continue;
+    }
 
     const parsed = parseGameday(fileContent);
 
